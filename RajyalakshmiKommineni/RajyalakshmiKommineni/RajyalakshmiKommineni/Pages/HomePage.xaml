@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:RajyalakshmiKommineni.CustomControls"
+             x:Class="RajyalakshmiKommineni.Pages.HomePage" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Padding="20,40,20,10" Spacing="10" VerticalOptions="FillAndExpand">
+            <controls:CircleImage HeightRequest="150" WidthRequest="150" Source="Profile.jpg" Aspect="AspectFill" HorizontalOptions="Center" BorderColor="White" BorderThickness="3"/>
+            <Label Text="{Binding ProfileName}" Margin="6,40,30,0" HorizontalOptions="CenterAndExpand" Style="{StaticResource BoldLabel}" FontSize="Large"/>
+            <Label Text="{Binding Designation}" HorizontalOptions="CenterAndExpand" Style="{StaticResource RegularLabel}"/>
+            <Button Text="Connect Email" Style="{StaticResource ButtonStyle}" BackgroundColor="#C71610" TextColor="White" Command="{Binding GmailClickCommand}" Margin="0,30,0,0"/>
+            <Button Text="Connect Linkedin" Style="{StaticResource ButtonStyle}" BackgroundColor="#4875B4" TextColor="White" Command="{Binding FbClickedCommand}"/>
+            <Button Text="Read blog" VerticalOptions="EndAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding GotoBlogCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

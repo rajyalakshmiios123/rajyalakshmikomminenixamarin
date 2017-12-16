@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RajyalakshmiKommineni.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!--Colors-->
+            <Color x:Key="AppColor">#000000</Color>
+            <Color x:Key="MilkWhiteColor">#DCD9CD</Color>
+
+            <!--Fonts-->
+            <OnPlatform x:Key="RegularFont"
+                    x:TypeArguments="x:String"
+                    iOS="OpenSans-Regular"
+                    Android="OpenSans-Regular.ttf#OpenSans-Regular"/>
+            <OnPlatform x:Key="SemoBoldFont"
+                    x:TypeArguments="x:String"
+                    iOS="OpenSans-Semibold"
+                    Android="OpenSans-Semibold.ttf#OpenSans-Semibold"/>
+            <OnPlatform x:Key="BoldFont"
+                    x:TypeArguments="x:String"
+                    iOS="OpenSans-Bold"
+                    Android="OpenSans-Bold.ttf#OpenSans-Bold"/>
+
+            <!--Control styles-->
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="RegularLabel" BaseResourceKey="BaseLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+            </Style>
+            <Style x:Key="SemiBoldLabel" BaseResourceKey="BaseLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource SemoBoldFont}"/>
+            </Style>
+            <Style x:Key="BoldLabel" BaseResourceKey="BaseLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+            </Style>
+            <Style x:Key="ButtonStyle"  TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource AppColor}"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource MilkWhiteColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource SemoBoldFont}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

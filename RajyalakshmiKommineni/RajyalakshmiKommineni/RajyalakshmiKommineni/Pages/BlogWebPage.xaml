@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RajyalakshmiKommineni.Pages.BlogWebPage" Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Back" HorizontalOptions="Start" Clicked="backButtonClicked" Style="{StaticResource ButtonStyle}" BackgroundColor="Black" TextColor="White"/>
+                <Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="forwardButtonClicked" Style="{StaticResource ButtonStyle}" BackgroundColor="Black" TextColor="White"/>
+            </StackLayout>
+            <WebView x:Name="webView" Source="{Binding WebSource}" WidthRequest="1000" HeightRequest="1000"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
